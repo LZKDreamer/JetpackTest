@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".lifecycle.CusLifeCycleActivity"></activity>
+        <activity android:name=".LiveData.LiveDataActivity"></activity>
+        <activity android:name=".lifecycle.CusLifeCycleActivity" />
         <activity android:name=".lifecycle.LifeCycleActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
