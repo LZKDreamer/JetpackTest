@@ -5,12 +5,14 @@ import android.os.Bundle
 import androidx.room.Room
 import com.lzk.jetpacktest.R
 import kotlinx.android.synthetic.main.activity_room.*
+import kotlin.random.Random
 
 class RoomActivity : AppCompatActivity() {
 
 
     private lateinit var mAppDataBase: AppDataBase
     private lateinit var mUserDao: UserDao
+    private var mId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,21 +20,23 @@ class RoomActivity : AppCompatActivity() {
         initEvent()
         mAppDataBase = AppDataBase.getInstance()
         mUserDao = mAppDataBase.getUerDao()
+        mId = Random.nextInt(99)
     }
 
     private fun initEvent(){
         add_btn.setOnClickListener {
-            mUserDao.addUser(User(1,"狗蛋儿"))
+            mId = Random.nextInt(99)
+            mUserDao.addUser(User(mId, "梨花:$mId",23))
             updateView()
         }
 
         delete_btn.setOnClickListener {
-            mUserDao.deleteUser(User(1,"狗蛋儿"))
+            mUserDao.deleteUser(User(mId,"梨花",18))
             updateView()
         }
 
         update_btn.setOnClickListener {
-            mUserDao.updateUser(User(1,"小狗蛋儿"))
+            mUserDao.updateUser(User(mId,"小梨花",22))
             updateView()
         }
 

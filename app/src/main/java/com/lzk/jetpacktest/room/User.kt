@@ -14,5 +14,6 @@ data class User(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     @ColumnInfo(name = "user_name")
-    val username: String
+    val username: String,
+    val age: Int
 )
