@@ -16,7 +16,7 @@ class RoomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room)
         initEvent()
-        mAppDataBase = Room.databaseBuilder(this,AppDataBase::class.java,"room_database").allowMainThreadQueries().build()
+        mAppDataBase = AppDataBase.getInstance()
         mUserDao = mAppDataBase.getUerDao()
     }
 
