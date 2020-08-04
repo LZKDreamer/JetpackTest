@@ -29,7 +29,7 @@ class PagingViewModel : ViewModel() {
         }.flowable.subscribe({
             mHomeArticleLiveData.postValue(it)
         },{
-            Log.d("TAG",it.message)
+            Log.d("PagingViewModel",it.message)
         })
     }
 }

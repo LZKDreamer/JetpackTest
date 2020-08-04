@@ -13,6 +13,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.lang.Exception
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 /**
  * Author: LiaoZhongKai
@@ -29,6 +30,7 @@ class ArticleDataSource() : RxPagingSource<Int,Article>() {
     override fun loadSingle(params: LoadParams<Int>): Single<LoadResult<Int, Article>> {
         val page = params.key?:0
         return mHttpRepository.requestWXArticles(page)
+            .delay(2,TimeUnit.SECONDS)//延时以便更好的观察加载更多的效果
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .map{
