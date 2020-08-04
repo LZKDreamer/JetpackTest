@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/item_author_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:text="作者名称"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        />
+</androidx.cardview.widget.CardView>
