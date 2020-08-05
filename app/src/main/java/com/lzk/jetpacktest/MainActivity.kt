@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.paging.ExperimentalPagingApi
 import com.lzk.jetpacktest.LiveData.LiveDataActivity
 import com.lzk.jetpacktest.lifecycle.LifeCycleActivity
 import com.lzk.jetpacktest.navigation.NavigationActivity
@@ -11,6 +12,7 @@ import com.lzk.jetpacktest.paging.PagingActivity
 import com.lzk.jetpacktest.room.RoomActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+@ExperimentalPagingApi
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
