@@ -1,8 +1,6 @@
 package com.lzk.jetpacktest.api
 
-import com.lzk.jetpacktest.api.bean.HomeArticle
-import io.reactivex.Observable
-import io.reactivex.Single
+import com.lzk.jetpacktest.api.bean.GirlResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -17,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class HttpRepository {
 
     companion object{
-        private const val BASE_URL = "https://www.wanandroid.com"
+        private const val BASE_URL = "https://gank.io/api/v2/"
 
     }
 
@@ -37,8 +35,8 @@ class HttpRepository {
             .create(ApiService::class.java)
     }
 
-    fun requestWXArticles(page: Int): Single<HomeArticle>{
-        return mApiService.getHomeArticleList(page)
+    suspend fun requestGirlList(page: Int): GirlResponse{
+        return mApiService.getGirlList(page)
     }
 
 

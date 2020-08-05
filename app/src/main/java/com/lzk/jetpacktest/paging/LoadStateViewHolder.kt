@@ -22,7 +22,7 @@ class LoadStateViewHolder(parent: ViewGroup, val retryCallback: () -> Unit,
     init {
         view.loading_retry_btn.setOnClickListener {
             Log.d("TAG","点击重试按钮")
-            retryCallback
+            retryCallback.invoke()
         }
     }
 
