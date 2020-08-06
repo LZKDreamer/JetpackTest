@@ -8,11 +8,10 @@ import androidx.paging.ExperimentalPagingApi
 import com.lzk.jetpacktest.LiveData.LiveDataActivity
 import com.lzk.jetpacktest.lifecycle.LifeCycleActivity
 import com.lzk.jetpacktest.navigation.NavigationActivity
-import com.lzk.jetpacktest.paging.PagingActivity
+import com.lzk.jetpacktest.paging.GirlActivity
 import com.lzk.jetpacktest.room.RoomActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-@ExperimentalPagingApi
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +36,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.main_livedata_btn -> startActivity(Intent(this,LiveDataActivity::class.java))
             R.id.main_room_btn -> startActivity(Intent(this,RoomActivity::class.java))
             R.id.main_navigation_btn -> startActivity(Intent(this,NavigationActivity::class.java))
-            R.id.main_paging_btn -> startActivity(Intent(this,PagingActivity::class.java))
+            R.id.main_paging_btn -> startActivity(Intent(this,GirlActivity::class.java))
         }
     }
 }
