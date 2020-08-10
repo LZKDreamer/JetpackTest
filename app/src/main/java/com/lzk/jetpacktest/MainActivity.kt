@@ -10,6 +10,7 @@ import com.lzk.jetpacktest.lifecycle.LifeCycleActivity
 import com.lzk.jetpacktest.navigation.NavigationActivity
 import com.lzk.jetpacktest.paging.GirlActivity
 import com.lzk.jetpacktest.room.RoomActivity
+import com.lzk.jetpacktest.workmanager.WorkManagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         main_room_btn.setOnClickListener(this)
         main_navigation_btn.setOnClickListener(this)
         main_paging_btn.setOnClickListener(this)
+        main_workmanager_btn.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.main_room_btn -> startActivity(Intent(this,RoomActivity::class.java))
             R.id.main_navigation_btn -> startActivity(Intent(this,NavigationActivity::class.java))
             R.id.main_paging_btn -> startActivity(Intent(this,GirlActivity::class.java))
+            R.id.main_workmanager_btn -> startActivity(Intent(this,WorkManagerActivity::class.java))
         }
     }
 }

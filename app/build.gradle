@@ -75,4 +75,6 @@ dependencies {
     //transformation
     implementation 'jp.wasabeef:glide-transformations:4.1.0'
 
+    //workmanager
+    implementation 'android.arch.work:work-runtime-ktx:1.0.1'
 }
