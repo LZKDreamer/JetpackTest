@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.lzk.jetpacktest">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,7 +13,8 @@
         android:networkSecurityConfig="@xml/networkconfig"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:name,android:theme">
         <activity android:name=".coroutine.CoroutineActivity"></activity>
         <activity android:name=".workmanager.WorkManagerActivity" />
         <activity android:name=".paging.GirlActivity" />

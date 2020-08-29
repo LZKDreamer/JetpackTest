@@ -81,4 +81,9 @@ dependencies {
 
     //workmanager
     implementation 'android.arch.work:work-runtime-ktx:1.0.1'
+
+    implementation ("cn.flyaudio:lib-mycar:1.0.3"){
+        exclude group: 'com.github.bumptech.glide';
+        exclude group: 'com.sina.weibo.sdk'
+    }
 }

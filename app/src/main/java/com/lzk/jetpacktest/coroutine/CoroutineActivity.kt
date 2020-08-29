@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.lzk.jetpacktest.R
 import kotlinx.android.synthetic.main.activity_coroutine.*
+import kotlinx.coroutines.delay
 import java.util.*
 
 class CoroutineActivity : AppCompatActivity() {
