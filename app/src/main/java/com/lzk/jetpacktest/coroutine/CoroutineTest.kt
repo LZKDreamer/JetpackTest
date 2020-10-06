@@ -36,6 +36,8 @@ fun main(){
         //await()获取async返回的值，当两个async执行完成后才会执行下面的这句代码
         println("result--> C:${c.await()},d:${d.await()}")
 
+        println("await()后面的语句")
+
         delay(3300)
 
         val aJoin = launch {
