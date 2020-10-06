@@ -24,6 +24,10 @@ android {
         }
     }
 
+    dataBinding{
+        enabled = true
+    }
+
     compileOptions{
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -65,11 +69,13 @@ dependencies {
     // optional - RxJava support
     implementation "androidx.paging:paging-rxjava2-ktx:$paging_version" // For Kotlin use paging-rxjava2-ktx
 
-    //retrofit
+    //region retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.14.7'
+    //endregion
+
     //rxjava
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.16'
@@ -81,9 +87,4 @@ dependencies {
 
     //workmanager
     implementation 'android.arch.work:work-runtime-ktx:1.0.1'
-
-    implementation ("cn.flyaudio:lib-mycar:1.0.3"){
-        exclude group: 'com.github.bumptech.glide';
-        exclude group: 'com.sina.weibo.sdk'
-    }
 }
