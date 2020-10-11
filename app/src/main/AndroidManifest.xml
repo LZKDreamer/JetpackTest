@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name,android:theme">
-        <activity android:name=".coroutine.CoroutineActivity"></activity>
+        <activity android:name=".viewmodel.ViewModelActivity"></activity>
+        <activity android:name=".coroutine.CoroutineActivity" />
         <activity android:name=".workmanager.WorkManagerActivity" />
         <activity android:name=".paging.GirlActivity" />
         <activity android:name=".navigation.NavigationActivity" />

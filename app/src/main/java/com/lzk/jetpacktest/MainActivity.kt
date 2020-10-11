@@ -11,6 +11,7 @@ import com.lzk.jetpacktest.lifecycle.LifeCycleActivity
 import com.lzk.jetpacktest.navigation.NavigationActivity
 import com.lzk.jetpacktest.paging.GirlActivity
 import com.lzk.jetpacktest.room.RoomActivity
+import com.lzk.jetpacktest.viewmodel.ViewModelActivity
 import com.lzk.jetpacktest.workmanager.WorkManagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         main_paging_btn.setOnClickListener(this)
         main_workmanager_btn.setOnClickListener(this)
         main_coroutine_btn.setOnClickListener(this)
+        main_viewmodel_btn.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.main_paging_btn -> startActivity(Intent(this,GirlActivity::class.java))
             R.id.main_workmanager_btn -> startActivity(Intent(this,WorkManagerActivity::class.java))
             R.id.main_coroutine_btn -> startActivity(Intent(this,CoroutineActivity::class.java))
+            R.id.main_viewmodel_btn -> startActivity(Intent(this,ViewModelActivity::class.java))
         }
     }
 }
