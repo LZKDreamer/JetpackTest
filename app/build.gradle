@@ -87,4 +87,7 @@ dependencies {
 
     //workmanager
     implementation 'android.arch.work:work-runtime-ktx:1.0.1'
+
+    //utilcode
+    implementation 'com.blankj:utilcodex:1.29.0'
 }

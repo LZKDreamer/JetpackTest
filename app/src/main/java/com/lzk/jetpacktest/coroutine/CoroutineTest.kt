@@ -6,6 +6,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlin.system.measureTimeMillis
 
 /**
  * Author: LiaoZhongKai.
@@ -59,7 +60,22 @@ fun main(){
         }
         bJoin.join()
         println("end--->Join")
+
+        //runBlocking会阻塞线程
+        val time = measureTimeMillis {
+            runBlocking {
+                println("***runBlocking before delay***")
+                delay(500)
+                println("***runBlocking after delay***")
+            }
+            //runBlocking后面的代码会在runBlocking执行完成后再执行
+            println("***after runBlocking***")
+        }
+//runBlocking后面的代码会在runBlocking执行完成后再执行
+        println("***runBlocking time:${time}***")
     }
+
+
 
 
     //=======================执行结果========================
