@@ -7,6 +7,7 @@ import android.view.View
 import androidx.paging.ExperimentalPagingApi
 import com.lzk.jetpacktest.LiveData.LiveDataActivity
 import com.lzk.jetpacktest.coroutine.CoroutineActivity
+import com.lzk.jetpacktest.databinding.DataBindingActivity
 import com.lzk.jetpacktest.lifecycle.LifeCycleActivity
 import com.lzk.jetpacktest.navigation.NavigationActivity
 import com.lzk.jetpacktest.paging.GirlActivity
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         main_workmanager_btn.setOnClickListener(this)
         main_coroutine_btn.setOnClickListener(this)
         main_viewmodel_btn.setOnClickListener(this)
+        main_databinding_btn.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.main_workmanager_btn -> startActivity(Intent(this,WorkManagerActivity::class.java))
             R.id.main_coroutine_btn -> startActivity(Intent(this,CoroutineActivity::class.java))
             R.id.main_viewmodel_btn -> startActivity(Intent(this,ViewModelActivity::class.java))
+            R.id.main_databinding_btn -> startActivity(Intent(this,DataBindingActivity::class.java))
         }
     }
 }

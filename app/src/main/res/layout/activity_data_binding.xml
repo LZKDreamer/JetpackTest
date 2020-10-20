@@ -7,6 +7,15 @@
         <variable
             name="employee"
             type="com.lzk.jetpacktest.databinding.Employee" />
+        <variable
+            name="desc"
+            type="String" />
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="age"
+            type="int" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,6 +41,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/data_iv"
             android:layout_marginTop="10dp"
-            android:text="@{employee.name}"/>
+            android:text="@{employee.name??`空的name`}"/>
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_tv"
+            android:layout_marginTop="10dp"
+            android:text="@{desc??`我是空的默认desc`}"
+            android:onClick="@{click}"/>
+        <TextView
+            android:id="@+id/age_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desc_tv"
+            android:layout_marginTop="10dp"
+            android:text="@{@string/age(age)}"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
