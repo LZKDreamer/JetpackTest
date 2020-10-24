@@ -1,10 +1,8 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 apply from: '../deps.gradle'
 
 android {
     defaultConfig {
-        applicationId "com.lzk.jetpacktest"
         versionCode 1
         versionName "1.0"
     }
