@@ -1,3 +1,4 @@
+
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
@@ -70,6 +71,11 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.14.7'
     //endregion
 
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.8.0'
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
     //rxjava
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.16'
@@ -84,4 +90,5 @@ dependencies {
 
     //utilcode
     implementation 'com.blankj:utilcodex:1.29.0'
+
 }

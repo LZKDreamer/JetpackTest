@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 apply from: '../deps.gradle'
+apply plugin: 'kotlin-android'
 
 android {
     defaultConfig {
@@ -11,5 +12,8 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+
     //可以在此添加该module单独需要的依赖
 }

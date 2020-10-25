@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name,android:theme">
-        <activity android:name=".viewmodel.ViewModelActivity"></activity>
+        <activity android:name=".okhttp.OkHttpTestActivity"></activity>
+        <activity android:name=".viewmodel.ViewModelActivity" />
         <activity android:name=".coroutine.CoroutineActivity" />
         <activity android:name=".workmanager.WorkManagerActivity" />
         <activity android:name=".paging.GirlActivity" />
@@ -24,7 +25,7 @@
         <activity android:name=".LiveData.LiveDataActivity" />
         <activity android:name=".lifecycle.CusLifeCycleActivity" />
         <activity android:name=".lifecycle.LifeCycleActivity" />
-        <activity android:name=".databinding.DataBindingActivity"/>
+        <activity android:name=".databinding.DataBindingActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
