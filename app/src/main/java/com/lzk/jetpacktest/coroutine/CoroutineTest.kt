@@ -12,6 +12,7 @@ import kotlinx.coroutines.runBlocking
  *
  **/
 fun main(){
+    //runBlocking 阻塞线程,runBlocking后面的语句会等待runBlocking执行完之后才会执行
     val rb1 = runBlocking {
         //launch() 异步，不阻塞线程，返回值Job
         val a = launch {
@@ -54,4 +55,6 @@ fun main(){
         bJoin.join()
         println("end--->Join")
     }
+
+    println("runBlocking后面的语句会等待runBlocking执行完之后才会执行")
 }
