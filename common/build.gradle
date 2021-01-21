@@ -1,0 +1,20 @@
+if (singleModule.toBoolean()){
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
+}
+apply from: '../deps.gradle'
+
+android {
+    defaultConfig {
+        if (singleModule.toBoolean()){
+            applicationId "com.lzk.common"
+        }
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    //可以在此添加该module单独需要的依赖
+}

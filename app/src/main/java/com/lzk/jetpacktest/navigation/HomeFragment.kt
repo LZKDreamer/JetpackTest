@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.lzk.jetpacktest.R
+import com.lzk.libnavannotation.FragmentDestination
 import kotlinx.android.synthetic.main.fragment_home.*
 
+@FragmentDestination(pageUrl = "main/home",asStarter = true)
 class HomeFragment : Fragment() {
 
     override fun onCreateView(
